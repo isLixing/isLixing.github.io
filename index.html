@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.isxing.name/2017/08/25/first-post/">
+    <link itemprop="mainEntityOfPage" href="http://www.isxing.name/2017/08/26/android小复习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李 星">
@@ -304,7 +304,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/25/first-post/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2017/08/26/android小复习/" itemprop="url">android小复习</a></h1>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-25T02:28:31+08:00">
-                2017-08-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-26T22:35:34+08:00">
+                2017-08-26
               </time>
             
 
@@ -356,8 +356,16 @@
       
         
           
-            <hr>
-<p>title: 在 Ubuntu 14.04 服务器上部署 Hexo<br>date: 2017-08-25 02:28:31<br>tags:  - Ubuntu - Hexocategories: -<br>—## 以下为 Markdown 文章正文。</p>
+            <h6 id="导语："><a href="#导语：" class="headerlink" title="导语："></a>导语：</h6><blockquote>
+<p>很久没有敲代码了，这里把Android的东西稍微复习一下下：<br>android的基本架构从上到下依次为：应用程序层、应用框架层、系统运行库层、Linux核心层，其中应用程序层和应用框架层都是由Java编写，系统运行库层是由C/C++编写；所有的应用使用的都是相同的应用框架。<br>Android四大基本组件:Activity、广播接收器、服务（Service）、内容提供器</p>
+<h4 id="1-Activity"><a href="#1-Activity" class="headerlink" title="1.Activity"></a>1.Activity</h4><ul>
+<li>创建活动需要从Activity基类中创建派生类<br>Activity状态有活动、暂停、停止。活动：onCreate -&gt;onStart -&gt;onResume,在这个过程View在前台可见;暂停：框，，在前台部分可见，直到另一个活动将其覆盖；停止:onStop,当应用由于其他原因停止时会调用onDestroy。<br>当应用不在前台时，但是占用了大量内存时活动也会被终止；如果内存很低，Android会选择性停止当前不在前台但占用大量内存的应用，当你需要再次回到已经停止了的应用中时需要再次onCreate。<br>活动之间转化Intent（意图），intent主要包含两个部分action（动作）和activity，显示intent是指明确了另外一个活动，但是使用更加普遍的是隐式intent——只说明了要完成的一般性动作和数据；当存在n个活动可以响应时，Android会弹出选择对话 用户可以进行选择要响应的活动。<h4 id="2-广播接收器（Broadcast-Receiver）"><a href="#2-广播接收器（Broadcast-Receiver）" class="headerlink" title="2.广播接收器（Broadcast Receiver）"></a>2.广播接收器（Broadcast Receiver）</h4></li>
+<li>没有界面，但是可以调用有界面的活动，生命历程：调用-&gt;onReceiver-&gt;结束<h4 id="3-服务Service"><a href="#3-服务Service" class="headerlink" title="3.服务Service"></a>3.服务Service</h4></li>
+<li>在后台无界面，耗时的逻辑和长期运行的任务一般都由Service在后台处理，启动Service和activity相似，需要intent帮助<h4 id="4-内容提供器"><a href="#4-内容提供器" class="headerlink" title="4.内容提供器"></a>4.内容提供器</h4></li>
+<li>管理应用数据和访问应用数据（应用中含content provide）</li>
+</ul>
+</blockquote>
+<p><strong>四大组件在使用时都需要在AndroidManifest.xml 中注册，敲黑板，不注册是不能用的，但是有的可以再Java代码中进行注册。今天就先写到这里啦</strong></p>
 
           
         
