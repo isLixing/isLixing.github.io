@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java,杂乱," />
 
 
 
@@ -95,13 +95,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="isXing&#39;s Blogs">
-<meta property="og:url" content="http://www.isxing.name/categories/android/index.html">
+<meta name="description" content="Override、Overload、Overwrite：分别表示为覆盖、重载、重写。">
+<meta name="keywords" content="java,杂乱">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java零散知识点记录（二）">
+<meta property="og:url" content="http://www.isxing.name/2017/08/28/Java零散知识点记录（二）/index.html">
 <meta property="og:site_name" content="isXing&#39;s Blogs">
+<meta property="og:description" content="Override、Overload、Overwrite：分别表示为覆盖、重载、重写。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-28T08:16:08.415Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="isXing&#39;s Blogs">
+<meta name="twitter:title" content="Java零散知识点记录（二）">
+<meta name="twitter:description" content="Override、Overload、Overwrite：分别表示为覆盖、重载、重写。">
 
 
 
@@ -131,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://www.isxing.name/categories/android/"/>
+  <link rel="canonical" href="http://www.isxing.name/2017/08/28/Java零散知识点记录（二）/"/>
 
 
 
 
 
-  <title>分类: android | isXing's Blogs</title>
+  <title>Java零散知识点记录（二） | isXing's Blogs</title>
   
 
 
@@ -156,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,55 +275,185 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>android<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.isxing.name/2017/08/28/Java零散知识点记录（二）/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李 星">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://tva1.sinaimg.cn/crop.0.0.664.664.180/006iwdYIjw8f6uuczydp6j30ig0igjt9.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="isXing's Blogs">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/08/26/android小复习/" itemprop="url">
-              
-                <span itemprop="name">android小复习</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Java零散知识点记录（二）</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-26T23:25:33+08:00"
-              content="2017-08-26" >
-          08-26
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T15:38:56+08:00">
+                2017-08-28
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/杂乱/" itemprop="url" rel="index">
+                    <span itemprop="name">杂乱</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Override、Overload、Overwrite：分别表示为覆盖、重载、重写。</p>
+<a id="more"></a>
+<ul>
+<li>覆盖（Override）：继承了父类同名无参函数。当子类从父类继承一个午餐方法，而又定义了一个同名无参方法时，则子类新写的方法覆盖父类的方法，称之为覆盖。</li>
+<li>重载（Overload）：继承了父类的同名有参函数。当子类继承了父类的一个同名有参函数 且方法参数表不同，则称重载。 通过方法重载，子类可以重新实现父类的某些方法，使其具有自己的特性。</li>
+<li>重写（Overwrite）：通过方法重写。通过方法重写，一个类中可以有多个具有相同名字的方法，由传递给他们的不同个数和不同类型的参数来决定使用哪种方法。<br>其中，覆盖和重写是对同一事物的两种说法，在派生类里面是重写函数，对基类来说，就是派生类覆盖了基类的函数。</li>
+</ul>
+<font color="" size="5">区分:</font>
+
+<ul>
+<li><p>重载：一般发生在同一个类中或者一段代码块里，在一个类中可以创建多个具有相同名字的方法，但是 具有不同的参数和不同的定义。调用时根据传递过来的参数决定具体使用某一个方法。重载的时候，方法名相同，参数类型和个数不同，返回值可以相同也可以不同 </p>
+</li>
+<li><p>重写/覆盖：一般发生在不同的类之间，且存在继承关系，表现的是父类与子类之间的多态性。是对父类的函数进行重新定义，如果子类中定义的方法名和参数与父类中的相同,就称这个方法被重写。</p>
+</li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/杂乱/" rel="tag"># 杂乱</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/28/Bmob创建移动后端服务/" rel="next" title="Bmob创建移动后端服务">
+                <i class="fa fa-chevron-left"></i> Bmob创建移动后端服务
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -326,6 +461,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="uyan_frame"></div>
+    
+  </div>
+
 
 
         </div>
@@ -570,10 +711,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -599,6 +740,10 @@
   
     
 
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2142664"></script>
+      <!-- UY END -->
     
   
 
