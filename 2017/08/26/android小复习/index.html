@@ -95,18 +95,18 @@
 
 
 
-<meta name="description" content="导语： 很久没有敲代码了，这里把Android的东西稍微复习一下下：">
+<meta name="description" content="导语：      很久没有敲代码了，这里把Android的东西稍微复习一下下：">
 <meta name="keywords" content="android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="android小复习——大概框架">
 <meta property="og:url" content="http://www.isxing.name/2017/08/26/android小复习/index.html">
 <meta property="og:site_name" content="isXing&#39;s Blogs">
-<meta property="og:description" content="导语： 很久没有敲代码了，这里把Android的东西稍微复习一下下：">
+<meta property="og:description" content="导语：      很久没有敲代码了，这里把Android的东西稍微复习一下下：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-05T12:21:59.892Z">
+<meta property="og:updated_time" content="2017-09-05T12:34:58.294Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android小复习——大概框架">
-<meta name="twitter:description" content="导语： 很久没有敲代码了，这里把Android的东西稍微复习一下下：">
+<meta name="twitter:description" content="导语：      很久没有敲代码了，这里把Android的东西稍微复习一下下：">
 
 
 
@@ -378,30 +378,41 @@
       
 
       
-        <h6 id="导语："><a href="#导语：" class="headerlink" title="导语："></a>导语：</h6><blockquote>
+        <p>导语：    </p>
+<blockquote>
 <p>很久没有敲代码了，这里把Android的东西稍微复习一下下：</p>
 </blockquote>
 <a id="more"></a>
 <p>android的基本架构从上到下依次为：应用程序层、应用框架层、系统运行库层、Linux核心层，其中应用程序层和应用框架层都是由Java编写，系统运行库层是由C/C++编写；所有的应用使用的都是相同的应用框架。</p>
-<p>##Android四大基本组件:</p>
-<p>Activity（活动）、Broadcast Receiver（广播接收器）、Service（服务）、Content Provider（内容提供器）</p>
-<p>####1.Activity</p>
-<ul>
+<h4 id="Android四大基本组件"><a href="#Android四大基本组件" class="headerlink" title="Android四大基本组件:"></a>Android四大基本组件:</h4><p>Activity（活动）、Broadcast Receiver（广播接收器）、Service（服务）、Content Provider（内容提供器）</p>
+<h5 id="1-Activity"><a href="#1-Activity" class="headerlink" title="1.Activity"></a>1.Activity</h5><ul>
 <li>创建活动需要从Activity基类中创建派生类<br>Activity状态有活动、暂停、停止。活动：onCreate -&gt;onStart -&gt;onResume,在这个过程View在前台可见;暂停：在前台部分可见，直到另一个活动将其覆盖；停止:onStop,当应用由于其他原因停止时会调用onDestroy。<br>当应用不在前台时，但是占用了大量内存时活动也会被终止；如果内存很低，Android会选择性停止当前不在前台但占用大量内存的应用，当你需要再次回到已经停止了的应用中时需要再次onCreate。</li>
 <li>活动之间转化Intent（意图），intent主要包含两个部分action（动作）和activity，显示intent是指明确了另外一个活动，但是使用更加普遍的是隐式intent——只说明了要完成的一般性动作和数据；当存在n个活动可以响应时，Android会弹出选择对话 用户可以进行选择要响应的活动。</li>
 </ul>
-<h4 id="2-Broadcast-Receiver（广播接收器）"><a href="#2-Broadcast-Receiver（广播接收器）" class="headerlink" title="2.Broadcast Receiver（广播接收器）"></a>2.Broadcast Receiver（广播接收器）</h4><ul>
+<h5 id="2-Broadcast-Receiver（广播接收器）"><a href="#2-Broadcast-Receiver（广播接收器）" class="headerlink" title="2.Broadcast Receiver（广播接收器）"></a>2.Broadcast Receiver（广播接收器）</h5><ul>
 <li>分为两类：普通广播和有序广播，普通广播的效率比有序广播稍高，但是有序广播可以设置优先级，广播接收器会最先处理优先级高的广播。</li>
 <li>没有界面，但是可以调用有界面的活动，生命历程：调用-&gt;onReceiver-&gt;结束</li>
 </ul>
-<h4 id="3-Service-服务"><a href="#3-Service-服务" class="headerlink" title="3.Service(服务)"></a>3.Service(服务)</h4><ul>
+<h5 id="3-Service-服务"><a href="#3-Service-服务" class="headerlink" title="3.Service(服务)"></a>3.Service(服务)</h5><ul>
 <li>在后台无界面，耗时的逻辑和长期运行的任务一般都由Service在后台处理，启动Service和activity相似，需要intent帮助(IntentService)</li>
 <li>service的启动和停止有两种方法：startService/stopService、bindService/unbindService </li>
 </ul>
-<h4 id="4-内容提供器"><a href="#4-内容提供器" class="headerlink" title="4.内容提供器"></a>4.内容提供器</h4><ul>
+<h5 id="4-内容提供器"><a href="#4-内容提供器" class="headerlink" title="4.内容提供器"></a>4.内容提供器</h5><ul>
 <li>管理应用数据和访问应用数据,常见的增删查改操作<br><strong>四大组件在使用时都需要在AndroidManifest.xml 中注册，敲黑板，不注册是不能用的，但是有的可以再Java代码中进行注册。</strong></li>
 </ul>
-<h4 id="常见的ViewGroup使用：Linearlayout、RelativeLayout、Framelayout···"><a href="#常见的ViewGroup使用：Linearlayout、RelativeLayout、Framelayout···" class="headerlink" title="常见的ViewGroup使用：Linearlayout、RelativeLayout、Framelayout···"></a>常见的ViewGroup使用：Linearlayout、RelativeLayout、Framelayout···</h4><h4 id="基础控件使用：TextView、Button、ImageView、EditText、···"><a href="#基础控件使用：TextView、Button、ImageView、EditText、···" class="headerlink" title="基础控件使用：TextView、Button、ImageView、EditText、···"></a>基础控件使用：TextView、Button、ImageView、EditText、···</h4><h4 id="常见的高级控件的使用有：-ListView、Toolbar、WebView、ViewPager等"><a href="#常见的高级控件的使用有：-ListView、Toolbar、WebView、ViewPager等" class="headerlink" title="常见的高级控件的使用有： ListView、Toolbar、WebView、ViewPager等"></a>常见的高级控件的使用有： ListView、Toolbar、WebView、ViewPager等</h4><h4 id="自定义View实现：OnDraw、onLayout-、onMeasure、自定义属性"><a href="#自定义View实现：OnDraw、onLayout-、onMeasure、自定义属性" class="headerlink" title="自定义View实现：OnDraw、onLayout 、onMeasure、自定义属性"></a>自定义View实现：OnDraw、onLayout 、onMeasure、自定义属性</h4><h4 id="数据存储："><a href="#数据存储：" class="headerlink" title="数据存储："></a>数据存储：</h4><ul>
+<h4 id="常见的ViewGroup使用："><a href="#常见的ViewGroup使用：" class="headerlink" title="常见的ViewGroup使用："></a>常见的ViewGroup使用：</h4><ul>
+<li>Linearlayout、RelativeLayout、Framelayout···</li>
+</ul>
+<h4 id="基础控件使用："><a href="#基础控件使用：" class="headerlink" title="基础控件使用："></a>基础控件使用：</h4><ul>
+<li>TextView、Button、ImageView、EditText、···</li>
+</ul>
+<h4 id="常见的高级控件的使用有："><a href="#常见的高级控件的使用有：" class="headerlink" title="常见的高级控件的使用有："></a>常见的高级控件的使用有：</h4><ul>
+<li>ListView、Toolbar、WebView、ViewPager等</li>
+</ul>
+<h4 id="自定义View实现："><a href="#自定义View实现：" class="headerlink" title="自定义View实现："></a>自定义View实现：</h4><ul>
+<li>OnDraw、onLayout 、onMeasure、自定义属性</li>
+</ul>
+<h4 id="数据存储："><a href="#数据存储：" class="headerlink" title="数据存储："></a>数据存储：</h4><ul>
 <li>android中数据存储的方式有：SharePreference、SQLite、私有存储目录和SD卡、ContentProvider来实现数据读写</li>
 </ul>
 <h4 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h4><ul>
@@ -623,7 +634,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#导语："><span class="nav-number">1.</span> <span class="nav-text">导语：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Broadcast-Receiver（广播接收器）"><span class="nav-number"></span> <span class="nav-text">2.Broadcast Receiver（广播接收器）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Service-服务"><span class="nav-number"></span> <span class="nav-text">3.Service(服务)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-内容提供器"><span class="nav-number"></span> <span class="nav-text">4.内容提供器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见的ViewGroup使用：Linearlayout、RelativeLayout、Framelayout···"><span class="nav-number"></span> <span class="nav-text">常见的ViewGroup使用：Linearlayout、RelativeLayout、Framelayout···</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基础控件使用：TextView、Button、ImageView、EditText、···"><span class="nav-number"></span> <span class="nav-text">基础控件使用：TextView、Button、ImageView、EditText、···</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见的高级控件的使用有：-ListView、Toolbar、WebView、ViewPager等"><span class="nav-number"></span> <span class="nav-text">常见的高级控件的使用有： ListView、Toolbar、WebView、ViewPager等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义View实现：OnDraw、onLayout-、onMeasure、自定义属性"><span class="nav-number"></span> <span class="nav-text">自定义View实现：OnDraw、onLayout 、onMeasure、自定义属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据存储："><span class="nav-number"></span> <span class="nav-text">数据存储：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络"><span class="nav-number"></span> <span class="nav-text">网络</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Android四大基本组件"><span class="nav-number">1.</span> <span class="nav-text">Android四大基本组件:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Activity"><span class="nav-number">1.1.</span> <span class="nav-text">1.Activity</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Broadcast-Receiver（广播接收器）"><span class="nav-number">1.2.</span> <span class="nav-text">2.Broadcast Receiver（广播接收器）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-Service-服务"><span class="nav-number">1.3.</span> <span class="nav-text">3.Service(服务)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-内容提供器"><span class="nav-number">1.4.</span> <span class="nav-text">4.内容提供器</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见的ViewGroup使用："><span class="nav-number">2.</span> <span class="nav-text">常见的ViewGroup使用：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基础控件使用："><span class="nav-number">3.</span> <span class="nav-text">基础控件使用：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见的高级控件的使用有："><span class="nav-number">4.</span> <span class="nav-text">常见的高级控件的使用有：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义View实现："><span class="nav-number">5.</span> <span class="nav-text">自定义View实现：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据存储："><span class="nav-number">6.</span> <span class="nav-text">数据存储：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络"><span class="nav-number">7.</span> <span class="nav-text">网络</span></a></li></ol></div>
             
 
           </div>
