@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="杂乱,android," />
+  <meta name="keywords" content="数据结构," />
 
 
 
@@ -95,18 +95,18 @@
 
 
 
-<meta name="description" content="1.GLSurfaceView提供了下列特性： 1&amp;gt; 管理一个surface，这个surface就是一块特殊的内存，能直接排版到android的视图view上。 2&amp;gt; 管理一个EGL display，它能让opengl把内容渲染到上述的surface上。 3&amp;gt; 用户自定义渲染器(render)。 4&amp;gt; 让渲染器在独立的线程里运作，和UI线程分离。 5&amp;gt; 支持按需渲染">
-<meta name="keywords" content="杂乱,android">
+<meta name="description" content="&amp;emsp;这篇文章主要介绍有关线性表的相关知识点及操作，其中包含有顺序存储结构的线性标、链式存储结构的线性标，其中链式存储结构的线性表中还介绍了单链表、循环链表、双向链表。">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="牛客网——Android专项训练笔记">
-<meta property="og:url" content="http://www.isxing.name/2017/08/28/牛客网——Android专项训练笔记/index.html">
+<meta property="og:title" content="线性表之顺序存储结构">
+<meta property="og:url" content="http://www.isxing.name/2017/09/12/线性表（一）/index.html">
 <meta property="og:site_name" content="isXing&#39;s Blog">
-<meta property="og:description" content="1.GLSurfaceView提供了下列特性： 1&amp;gt; 管理一个surface，这个surface就是一块特殊的内存，能直接排版到android的视图view上。 2&amp;gt; 管理一个EGL display，它能让opengl把内容渲染到上述的surface上。 3&amp;gt; 用户自定义渲染器(render)。 4&amp;gt; 让渲染器在独立的线程里运作，和UI线程分离。 5&amp;gt; 支持按需渲染">
+<meta property="og:description" content="&amp;emsp;这篇文章主要介绍有关线性表的相关知识点及操作，其中包含有顺序存储结构的线性标、链式存储结构的线性标，其中链式存储结构的线性表中还介绍了单链表、循环链表、双向链表。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-28T04:57:26.427Z">
+<meta property="og:updated_time" content="2017-09-13T15:44:35.518Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="牛客网——Android专项训练笔记">
-<meta name="twitter:description" content="1.GLSurfaceView提供了下列特性： 1&amp;gt; 管理一个surface，这个surface就是一块特殊的内存，能直接排版到android的视图view上。 2&amp;gt; 管理一个EGL display，它能让opengl把内容渲染到上述的surface上。 3&amp;gt; 用户自定义渲染器(render)。 4&amp;gt; 让渲染器在独立的线程里运作，和UI线程分离。 5&amp;gt; 支持按需渲染">
+<meta name="twitter:title" content="线性表之顺序存储结构">
+<meta name="twitter:description" content="&amp;emsp;这篇文章主要介绍有关线性表的相关知识点及操作，其中包含有顺序存储结构的线性标、链式存储结构的线性标，其中链式存储结构的线性表中还介绍了单链表、循环链表、双向链表。">
 
 
 
@@ -136,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://www.isxing.name/2017/08/28/牛客网——Android专项训练笔记/"/>
+  <link rel="canonical" href="http://www.isxing.name/2017/09/12/线性表（一）/"/>
 
 
 
 
 
-  <title>牛客网——Android专项训练笔记 | isXing's Blog</title>
+  <title>线性表之顺序存储结构 | isXing's Blog</title>
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.isxing.name/2017/08/28/牛客网——Android专项训练笔记/">
+    <link itemprop="mainEntityOfPage" href="http://www.isxing.name/2017/09/12/线性表（一）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李 星">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">牛客网——Android专项训练笔记</h1>
+          <h1 class="post-title" itemprop="name headline">线性表之顺序存储结构</h1>
         
 
         <div class="post-meta">
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T11:34:31+08:00">
-                2017-08-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-12T00:32:45+08:00">
+                2017-09-12
               </time>
             
 
@@ -341,8 +341,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂乱/" itemprop="url" rel="index">
-                    <span itemprop="name">杂乱</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -378,23 +378,25 @@
       
 
       
-        <ul>
-<li><p>1.GLSurfaceView提供了下列特性：</p>
-<pre><code>1&gt; 管理一个surface，这个surface就是一块特殊的内存，能直接排版到android的视图view上。
-2&gt; 管理一个EGL display，它能让opengl把内容渲染到上述的surface上。
-3&gt; 用户自定义渲染器(render)。
-4&gt; 让渲染器在独立的线程里运作，和UI线程分离。
-5&gt; 支持按需渲染(on-demand)和连续渲染(continuous)。
-6&gt; 一些可选工具，如调试。
-</code></pre></li>
-</ul>
+        <p> &emsp;这篇文章主要介绍有关线性表的相关知识点及操作，其中包含有顺序存储结构的线性标、链式存储结构的线性标，其中链式存储结构的线性表中还介绍了单链表、循环链表、双向链表。</p>
 <a id="more"></a>
+<h1 id="了解线性表"><a href="#了解线性表" class="headerlink" title="了解线性表"></a>了解线性表</h1><ul>
+<li><p>在线性表的顺序存储中，线性表中的数据如果在逻辑上是相邻的，那么在物理结构上也是相邻的。</p>
+</li>
+<li><p>区分两个概念：<br>&emsp;数组长度：在线性表中，为了估算线性表的最大存储容量设置一个数组，数组的长度就是这个最大存储容量。线性表长度：指当前线性表中所有数据占用的长度，线性表长度不能超过存储容量，即数组长度。</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//顺序存储结构代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize 20      <span class="comment">//存储空间初始分配量</span></span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;   <span class="comment">//ElemType类型设置为int型，可根据实际情况修改</span></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SqlList</span>&#123;</span></div><div class="line">    ElemType datap[MAxSize];     <span class="comment">//数组存储当前数据元素，最大值为MaxSize</span></div><div class="line">    <span class="keyword">int</span> length;     <span class="comment">//线性表当前长度</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h1 id="线性表的基本操作："><a href="#线性表的基本操作：" class="headerlink" title="线性表的基本操作："></a>线性表的基本操作：</h1><p>下面的操作都是在存在SQList的条件下进行的操作</p>
 <ul>
-<li><p>2.下列对 android NDK 的理解正确的是(A B C D)<br>A.NDK 是一系列工具的集合<br>B.NDK 提供了一份稳定、功能有限的 API 头文件声明<br>C.使 “Java+C” 的开发方式终于转正，成为官方支持的开发方式<br>D. NDK 将是 Android 平台支持 C 开发的开端 讨论解答：NDK是一系列工具的集合，NDK 提供了一系列的工具，帮助开发者迅速的开发 C/C++ 的动态库,并能自 动将 so 和 java 应用打成 apk包。 NDK集成了交叉编译器，并提供了相应的mk文件和隔离cpu  、平台等的差异，开发人员只需简单的修改 mk 文件就 可以创建出so。</p>
+<li><p>获取元素</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getElem</span><span class="params">(SqList L,<span class="keyword">int</span> i,ElemType *e)</span></span>&#123;</div><div class="line"><span class="comment">//在调用该函数时，需要传入一个SqList型的结构体，i表示要获取第i个位置的数据，e返回第i个数据元素的值。</span></div><div class="line">    <span class="keyword">if</span>(L.length==<span class="number">0</span>||i&lt;<span class="number">1</span>||i&gt;L.length)</div><div class="line">        <span class="keyword">return</span> ERROR;</div><div class="line">    *e=L.data[i<span class="number">-1</span>];<span class="comment">//在数组中是从0开始的，所以获取第i个位置的数据就是读取data[i-1]</span></div><div class="line">    <span class="keyword">return</span> OK;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>3.在同一线程中 android.Handler 和 android.MessaegQueue 的数量对应关系是:N 个 Handler 对应一个 MessageQueue 。在一个线程中一定会调用一个 Loop.prepare() ，其中就生成一个 MessageQueue，而代码中可以new 多个 Handler 发送各自的Message 到这个MessageQuery中，最后调用msg.target.dispatch中这个target来捕获自己发送的Messge，所以是多对一。</p>
+<li><p>插入数据</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">insert</span> <span class="params">(SqList *l,<span class="keyword">int</span> i,ElemType e)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> k;</div><div class="line">    <span class="keyword">if</span>(l-&gt;length==MaxSize)</div><div class="line">        <span class="keyword">return</span> ERROR;</div><div class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;l-&gt;length)</div><div class="line">        <span class="keyword">return</span> ERROR;</div><div class="line">    <span class="keyword">if</span>(i&lt;l-&gt;length)&#123;</div><div class="line">        <span class="keyword">for</span>(k=l-&gt;length<span class="number">-1</span>;k&gt;=i<span class="number">-1</span>;k--)</div><div class="line">            l-&gt;data[k+<span class="number">1</span>]=l-&gt;data[k]; </div><div class="line">    &#125;   </div><div class="line">    l-&gt;data[i<span class="number">-1</span>]=e;</div><div class="line">    l-&gt;length++;</div><div class="line">    <span class="keyword">return</span> OK;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>4.关于Android dvm 的进程和 Linux 的进程: DVM 指 dalivk 的虚拟机.每一个 Android 应用程序都在它自己的进程中运行，都拥有一个独立的Dalvik虚拟机实例.而每一个DVM都是在Linux 中的一个进程，所以说可以认为是同一个概念；每一个Android应用都运行在自己的DVM实例中，每一个DVM实例都是一个独立的进程空间，所有Android应用线程对于一个Linux线程，DVM因此可以更多的依赖操作系统的线程调度和管理机制。</p>
+<li><p>删除数据</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Listdelete</span> <span class="params">(SqList *l,<span class="keyword">int</span> i,ElemType *e)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> k;</div><div class="line">    <span class="keyword">if</span>(l-&gt;length==<span class="number">0</span>)</div><div class="line">        <span class="keyword">return</span> ERROR;</div><div class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;l-&gt;length)</div><div class="line">        <span class="keyword">return</span> ERROR;</div><div class="line">    <span class="keyword">if</span>(i&lt;l-&gt;length)&#123;</div><div class="line">        <span class="keyword">for</span>(k=i;k&lt;l-&gt;length;k++)</div><div class="line">            l-&gt;data[k<span class="number">-1</span>]=l-&gt;data[k]; </div><div class="line">    &#125;       </div><div class="line">    l-&gt;length--;</div><div class="line">    <span class="keyword">return</span> OK;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 
@@ -414,9 +416,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/杂乱/" rel="tag"># 杂乱</a>
-          
-            <a href="/tags/android/" rel="tag"># android</a>
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
           
         </div>
       
@@ -429,8 +429,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/28/Java零散知识记录（一）/" rel="next" title="Java零散知识记录（一）">
-                <i class="fa fa-chevron-left"></i> Java零散知识记录（一）
+              <a href="/2017/08/28/Java零散知识点记录（二）/" rel="next" title="Java零散知识点记录（二）">
+                <i class="fa fa-chevron-left"></i> Java零散知识点记录（二）
               </a>
             
           </div>
@@ -439,8 +439,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/08/28/Bmob创建移动后端服务/" rel="prev" title="Bmob创建移动后端服务">
-                Bmob创建移动后端服务 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/13/线性表之顺序存储结构/" rel="prev" title="线性表（一）">
+                线性表（一） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -496,8 +496,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://tva1.sinaimg.cn/crop.0.0.664.664.180/006iwdYIjw8f6uuczydp6j30ig0igjt9.jpg"
@@ -596,6 +605,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#了解线性表"><span class="nav-number">1.</span> <span class="nav-text">了解线性表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线性表的基本操作："><span class="nav-number">2.</span> <span class="nav-text">线性表的基本操作：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
