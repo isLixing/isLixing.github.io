@@ -95,18 +95,18 @@
 
 
 
-<meta name="description" content="#线性表的链式存储结构  单链表 单链表的存储结构 12345tydedef struct Node&amp;#123;    ElemTytpe data;    struct Node *next;&amp;#125;Node;typedef struct Node *LinkList;/*定义LinkList*/  初始化顺序线性表 12345678Status InitList(LinkList *L)&amp;">
+<meta name="description" content="#线性表的链式存储结构  单链表 单链表的存储结构12345tydedef struct Node&amp;#123;    ElemTytpe data;    struct Node *next;&amp;#125;Node;typedef struct Node *LinkList;/*定义LinkList*/">
 <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性表（二）">
 <meta property="og:url" content="http://www.isxing.name/2017/09/17/线性表（二）/index.html">
 <meta property="og:site_name" content="isXing&#39;s Blog">
-<meta property="og:description" content="#线性表的链式存储结构  单链表 单链表的存储结构 12345tydedef struct Node&amp;#123;    ElemTytpe data;    struct Node *next;&amp;#125;Node;typedef struct Node *LinkList;/*定义LinkList*/  初始化顺序线性表 12345678Status InitList(LinkList *L)&amp;">
+<meta property="og:description" content="#线性表的链式存储结构  单链表 单链表的存储结构12345tydedef struct Node&amp;#123;    ElemTytpe data;    struct Node *next;&amp;#125;Node;typedef struct Node *LinkList;/*定义LinkList*/">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-28T14:39:25.010Z">
+<meta property="og:updated_time" content="2017-10-15T14:42:24.387Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性表（二）">
-<meta name="twitter:description" content="#线性表的链式存储结构  单链表 单链表的存储结构 12345tydedef struct Node&amp;#123;    ElemTytpe data;    struct Node *next;&amp;#125;Node;typedef struct Node *LinkList;/*定义LinkList*/  初始化顺序线性表 12345678Status InitList(LinkList *L)&amp;">
+<meta name="twitter:description" content="#线性表的链式存储结构  单链表 单链表的存储结构12345tydedef struct Node&amp;#123;    ElemTytpe data;    struct Node *next;&amp;#125;Node;typedef struct Node *LinkList;/*定义LinkList*/">
 
 
 
@@ -380,12 +380,14 @@
       
         <p>#线性表的链式存储结构</p>
 <h2 id=""><a href="#" class="headerlink" title=" "></a> </h2><h2 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h2><ul>
-<li><p>单链表的存储结构</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">tydedef <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></div><div class="line">    ElemTytpe data;</div><div class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">next</span>;</span></div><div class="line">&#125;Node;</div><div class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">LinkList</span>;</span><span class="comment">/*定义LinkList*/</span></div></pre></td></tr></table></figure>
+<li>单链表的存储结构<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">tydedef <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></div><div class="line">    ElemTytpe data;</div><div class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">next</span>;</span></div><div class="line">&#125;Node;</div><div class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">LinkList</span>;</span><span class="comment">/*定义LinkList*/</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>初始化顺序线性表</p>
+</ul>
+<!--more-- >
+
+- 初始化顺序线性表
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function">Status <span class="title">InitList</span><span class="params">(LinkList *L)</span></span>&#123;</div><div class="line">    *L=(LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node)); <span class="comment">/* 产生头结点,并使L指向此头结点 */</span></div><div class="line">    <span class="keyword">if</span>(!(*L)) <span class="comment">/* 存储分配失败 */</span></div><div class="line">            <span class="keyword">return</span> ERROR;</div><div class="line">    (*L)-&gt;next=<span class="literal">NULL</span>; <span class="comment">/* 指针域为空 */</span></div><div class="line"></div><div class="line">    <span class="keyword">return</span> OK;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<ul>
 <li><p>获取线性表中第i个数据元素的值</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function">Status <span class="title">GetElem</span><span class="params">(LinkList L,<span class="keyword">int</span> i,ElemType *e)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> j;</div><div class="line">    LinkList p;     <span class="comment">/* 声明一结点p */</span></div><div class="line">    p = L-&gt;next;        <span class="comment">/* 让p指向链表L的第一个结点 */</span></div><div class="line">    j = <span class="number">1</span>;      <span class="comment">/*  j为计数器 */</span></div><div class="line">    <span class="keyword">while</span> (p &amp;&amp; j&lt;i)  <span class="comment">/* p不为空或者计数器j还没有等于i时，循环继续 */</span></div><div class="line">    &#123;   </div><div class="line">        p = p-&gt;next;  <span class="comment">/* 让p指向下一个结点 */</span></div><div class="line">        ++j;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> ( !p || j&gt;i ) </div><div class="line">        <span class="keyword">return</span> ERROR;  <span class="comment">/*  第i个元素不存在 */</span></div><div class="line">    *e = p-&gt;data;   <span class="comment">/*  取第i个元素的数据 */</span></div><div class="line">    <span class="keyword">return</span> OK;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
@@ -405,7 +407,7 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateListTail</span><span class="params">(LinkList *L, <span class="keyword">int</span> n)</span> </span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    LinkList p,r;</div><div class="line">    <span class="keyword">int</span> i;</div><div class="line">    srand(time(<span class="number">0</span>));                      <span class="comment">/* 初始化随机数种子 */</span></div><div class="line">    *L = (LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node)); <span class="comment">/* L为整个线性表 */</span></div><div class="line">    r=*L;                                <span class="comment">/* r为指向尾部的结点 */</span></div><div class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;n; i++) </div><div class="line">    &#123;</div><div class="line">        p = (Node *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node)); <span class="comment">/*  生成新结点 */</span></div><div class="line">        p-&gt;data = rand()%<span class="number">100</span>+<span class="number">1</span>;           <span class="comment">/*  随机生成100以内的数字 */</span></div><div class="line">        r-&gt;next=p;                        <span class="comment">/* 将表尾终端结点的指针指向新结点 */</span></div><div class="line">        r = p;                            <span class="comment">/* 将当前的新结点定义为表尾终端结点 */</span></div><div class="line">    &#125;</div><div class="line">    r-&gt;next = <span class="literal">NULL</span>;                       <span class="comment">/* 表示当前链表结束 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-
+-->
       
     </div>
     
