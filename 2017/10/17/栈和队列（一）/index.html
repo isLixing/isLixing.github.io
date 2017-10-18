@@ -95,18 +95,18 @@
 
 
 
-<meta name="description" content="&amp;emsp;这篇文章主要介绍有关线性表的相关知识点及操作，其中包含有顺序存储结构的线性标、链式存储结构的线性标，其中链式存储结构的线性表中还介绍了单链表、循环链表、双向链表。">
+<meta name="description" content="导语栈是只允许在一段进行插入和删除操作的线性表，其中允许进行插入删除操作的一端称为栈顶，另一端称为栈底。栈的基本操作包括有：在栈顶进行插入删除操作、栈的初始化、判断栈是否为空、取栈顶元素、遍历栈。">
 <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线性表（一）">
-<meta property="og:url" content="http://www.isxing.name/2017/09/12/线性表（一）/index.html">
+<meta property="og:title" content="栈和队列（一）">
+<meta property="og:url" content="http://www.isxing.name/2017/10/17/栈和队列（一）/index.html">
 <meta property="og:site_name" content="isXing&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;这篇文章主要介绍有关线性表的相关知识点及操作，其中包含有顺序存储结构的线性标、链式存储结构的线性标，其中链式存储结构的线性表中还介绍了单链表、循环链表、双向链表。">
+<meta property="og:description" content="导语栈是只允许在一段进行插入和删除操作的线性表，其中允许进行插入删除操作的一端称为栈顶，另一端称为栈底。栈的基本操作包括有：在栈顶进行插入删除操作、栈的初始化、判断栈是否为空、取栈顶元素、遍历栈。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-13T15:51:16.313Z">
+<meta property="og:updated_time" content="2017-10-18T15:18:33.661Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="线性表（一）">
-<meta name="twitter:description" content="&amp;emsp;这篇文章主要介绍有关线性表的相关知识点及操作，其中包含有顺序存储结构的线性标、链式存储结构的线性标，其中链式存储结构的线性表中还介绍了单链表、循环链表、双向链表。">
+<meta name="twitter:title" content="栈和队列（一）">
+<meta name="twitter:description" content="导语栈是只允许在一段进行插入和删除操作的线性表，其中允许进行插入删除操作的一端称为栈顶，另一端称为栈底。栈的基本操作包括有：在栈顶进行插入删除操作、栈的初始化、判断栈是否为空、取栈顶元素、遍历栈。">
 
 
 
@@ -136,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://www.isxing.name/2017/09/12/线性表（一）/"/>
+  <link rel="canonical" href="http://www.isxing.name/2017/10/17/栈和队列（一）/"/>
 
 
 
 
 
-  <title>线性表（一） | isXing's Blog</title>
+  <title>栈和队列（一） | isXing's Blog</title>
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.isxing.name/2017/09/12/线性表（一）/">
+    <link itemprop="mainEntityOfPage" href="http://www.isxing.name/2017/10/17/栈和队列（一）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李 星">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">线性表（一）</h1>
+          <h1 class="post-title" itemprop="name headline">栈和队列（一）</h1>
         
 
         <div class="post-meta">
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-12T00:32:45+08:00">
-                2017-09-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-17T22:38:37+08:00">
+                2017-10-17
               </time>
             
 
@@ -378,28 +378,40 @@
       
 
       
-        <p> &emsp;这篇文章主要介绍有关线性表的相关知识点及操作，其中包含有顺序存储结构的线性标、链式存储结构的线性标，其中链式存储结构的线性表中还介绍了单链表、循环链表、双向链表。</p>
-<a id="more"></a>
-<h1 id="了解线性表"><a href="#了解线性表" class="headerlink" title="了解线性表"></a>了解线性表</h1><ul>
-<li><p>在线性表的顺序存储中，线性表中的数据如果在逻辑上是相邻的，那么在物理结构上也是相邻的。</p>
-</li>
-<li><p>区分两个概念：<br>&emsp;数组长度：在线性表中，为了估算线性表的最大存储容量设置一个数组，数组的长度就是这个最大存储容量。线性表长度：指当前线性表中所有数据占用的长度，线性表长度不能超过存储容量，即数组长度。</p>
-</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//顺序存储结构代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize 20      <span class="comment">//存储空间初始分配量</span></span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;   <span class="comment">//ElemType类型设置为int型，可根据实际情况修改</span></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SqlList</span>&#123;</span></div><div class="line">    ElemType datap[MAxSize];     <span class="comment">//数组存储当前数据元素，最大值为MaxSize</span></div><div class="line">    <span class="keyword">int</span> length;     <span class="comment">//线性表当前长度</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h1 id="线性表的基本操作："><a href="#线性表的基本操作：" class="headerlink" title="线性表的基本操作："></a>线性表的基本操作：</h1><p>下面的操作都是在存在SQList的条件下进行的操作</p>
-<ul>
-<li><p>获取元素</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getElem</span><span class="params">(SqList L,<span class="keyword">int</span> i,ElemType *e)</span></span>&#123;</div><div class="line"><span class="comment">//在调用该函数时，需要传入一个SqList型的结构体，i表示要获取第i个位置的数据，e返回第i个数据元素的值。</span></div><div class="line">    <span class="keyword">if</span>(L.length==<span class="number">0</span>||i&lt;<span class="number">1</span>||i&gt;L.length)</div><div class="line">        <span class="keyword">return</span> ERROR;</div><div class="line">    *e=L.data[i<span class="number">-1</span>];<span class="comment">//在数组中是从0开始的，所以获取第i个位置的数据就是读取data[i-1]</span></div><div class="line">    <span class="keyword">return</span> OK;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>插入数据</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">insert</span> <span class="params">(SqList *l,<span class="keyword">int</span> i,ElemType e)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> k;</div><div class="line">    <span class="keyword">if</span>(l-&gt;length==MaxSize)</div><div class="line">        <span class="keyword">return</span> ERROR;</div><div class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;l-&gt;length)</div><div class="line">        <span class="keyword">return</span> ERROR;</div><div class="line">    <span class="keyword">if</span>(i&lt;l-&gt;length)&#123;</div><div class="line">        <span class="keyword">for</span>(k=l-&gt;length<span class="number">-1</span>;k&gt;=i<span class="number">-1</span>;k--)</div><div class="line">            l-&gt;data[k+<span class="number">1</span>]=l-&gt;data[k]; </div><div class="line">    &#125;   </div><div class="line">    l-&gt;data[i<span class="number">-1</span>]=e;</div><div class="line">    l-&gt;length++;</div><div class="line">    <span class="keyword">return</span> OK;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>删除数据</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Listdelete</span> <span class="params">(SqList *l,<span class="keyword">int</span> i,ElemType *e)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> k;</div><div class="line">    <span class="keyword">if</span>(l-&gt;length==<span class="number">0</span>)</div><div class="line">        <span class="keyword">return</span> ERROR;</div><div class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;l-&gt;length)</div><div class="line">        <span class="keyword">return</span> ERROR;</div><div class="line">    <span class="keyword">if</span>(i&lt;l-&gt;length)&#123;</div><div class="line">        <span class="keyword">for</span>(k=i;k&lt;l-&gt;length;k++)</div><div class="line">            l-&gt;data[k<span class="number">-1</span>]=l-&gt;data[k]; </div><div class="line">    &#125;       </div><div class="line">    l-&gt;length--;</div><div class="line">    <span class="keyword">return</span> OK;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
+        <h1 id="导语"><a href="#导语" class="headerlink" title="导语"></a>导语</h1><p>栈是只允许在一段进行插入和删除操作的线性表，其中允许进行插入删除操作的一端称为栈顶，另一端称为栈底。<br>栈的基本操作包括有：在栈顶进行插入删除操作、栈的初始化、判断栈是否为空、取栈顶元素、遍历栈。</p>
+<!--more-- >
 
+-  栈的结构定义
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&#123;</span></div><div class="line">    sElemType data;<span class="comment">//栈中的数据</span></div><div class="line">    sElemType  *top;<span class="comment">//栈顶指针</span></div><div class="line">    sElemType  *base;<span class="comment">//栈底指针</span></div><div class="line">    <span class="keyword">int</span> stacksize;<span class="comment">//栈底大小</span></div><div class="line">&#125;Stack;</div></pre></td></tr></table></figure>
+<ul>
+<li>栈的初始化</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//初始化一个空栈 </span></div><div class="line"><span class="function">Status <span class="title">InitStack</span><span class="params">(Stack &amp;S)</span>  </span>&#123;</div><div class="line">    S.base=(sElemType*)<span class="built_in">malloc</span>(maxSize*<span class="keyword">sizeof</span>(sElemType));<span class="comment">//分配存储空间 </span></div><div class="line">    <span class="keyword">if</span>(!S.base) <span class="keyword">return</span> ERROR;               <span class="comment">//存储空间分配失败    </span></div><div class="line">    S.top=S.base; <span class="comment">//栈空</span></div><div class="line">    S.stacksize=maxSize; <span class="comment">//设置最大栈空间</span></div><div class="line">    <span class="keyword">return</span> OK; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>判断栈是否为空</li>
+</ul>
+<p>栈判断是否为空就是通过判断栈底和栈底是否相等<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//判断栈是否为空、</span></div><div class="line"><span class="function">Status <span class="title">StackEmpty</span><span class="params">(Stack S)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(S.top==S.base)<span class="comment">//栈空 </span></div><div class="line">        <span class="keyword">return</span> FALSE;</div><div class="line">    <span class="keyword">else</span> </div><div class="line">        <span class="keyword">return</span> TRUE;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>取栈顶元素</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取栈顶元素</span></div><div class="line"><span class="function">Status <span class="title">getTop</span><span class="params">(Stack S,sElemType &amp;e)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(S.base==S.top) <span class="keyword">return</span> ERROR;<span class="comment">//栈空</span></div><div class="line">    e =*(S.top<span class="number">-1</span>);</div><div class="line">    <span class="keyword">return</span> OK;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>在栈顶插入新元素为栈顶</li>
+</ul>
+<p>这里传入的是栈的地址，目的是在函数中插入新的栈顶后会退出，传入地址可以真实改变栈顶，而不仅仅只是在这个函数中发生改变。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//插入新元素为栈顶</span></div><div class="line"><span class="function">Status <span class="title">Push</span><span class="params">(Stack &amp;S,sElemType e)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(S.top-S.base&gt;=S.stacksize)&#123;</div><div class="line">        S.base =(sElemType*)<span class="built_in">realloc</span>(S.base,STACKINCREMENT*<span class="keyword">sizeof</span>(sElemType)) ;</div><div class="line">        <span class="keyword">if</span>(!S.base) <span class="built_in">exit</span>(OVERFLOW);<span class="comment">//存储分配失败</span></div><div class="line">        S.top=S.stacksize+S.base;</div><div class="line">        S.stacksize+=STACKINCREMENT; </div><div class="line">    &#125; </div><div class="line">    *S.top++=e;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>删除栈顶元素</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//删除栈顶元素</span></div><div class="line"><span class="function">Status <span class="title">Pop</span><span class="params">(Stack &amp;S,sElemType &amp;e)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(S.top==S.base) <span class="keyword">return</span> ERROR;<span class="comment">//栈空</span></div><div class="line"><span class="comment">//  e=*(S.top-1);</span></div><div class="line"><span class="comment">//  S.top--;</span></div><div class="line">    e=*--S.top;<span class="comment">//与上边注释的两行代码等价</span></div><div class="line">    <span class="keyword">return</span> OK; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>遍历栈</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//遍历栈</span></div><div class="line"><span class="function">Status <span class="title">StackTraverse</span><span class="params">(Stack S )</span> </span>&#123;</div><div class="line">  sElemType *b=S.base;</div><div class="line">  sElemType *t=S.top;</div><div class="line">  <span class="keyword">if</span>(b==t) <span class="keyword">return</span> ERROR;</div><div class="line">  <span class="keyword">while</span>(t&gt;b)&#123;<span class="comment">//栈不为空 </span></div><div class="line">    visit(*b);</div><div class="line">      b++;   </div><div class="line">  &#125;</div><div class="line">  <span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">  <span class="keyword">return</span> OK;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>总结：在上述代码中发现，凡是涉及到要真实改变栈中的数据的传入的都是地址，不涉及栈的数据改变的传入的都只是当做形参变量在使用。在对栈进行操作时格外要注意栈是否为空。<br>演示代码可以去<a href="https://github.com/isLixing/-data-structure-/blob/master/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.cpp">github查看或下载</a>。</li>
+</ul>
+-->
       
     </div>
     
@@ -429,8 +441,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/28/Java零散知识点记录（二）/" rel="next" title="Java零散知识点记录（二）">
-                <i class="fa fa-chevron-left"></i> Java零散知识点记录（二）
+              <a href="/2017/09/17/线性表（二）/" rel="next" title="线性表（二）">
+                <i class="fa fa-chevron-left"></i> 线性表（二）
               </a>
             
           </div>
@@ -438,10 +450,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/17/线性表（二）/" rel="prev" title="线性表（二）">
-                线性表（二） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -615,7 +623,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#了解线性表"><span class="nav-number">1.</span> <span class="nav-text">了解线性表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线性表的基本操作："><span class="nav-number">2.</span> <span class="nav-text">线性表的基本操作：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#导语"><span class="nav-number">1.</span> <span class="nav-text">导语</span></a></li></ol></div>
             
 
           </div>
