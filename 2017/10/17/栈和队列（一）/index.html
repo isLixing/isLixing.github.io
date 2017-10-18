@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="isXing&#39;s Blog">
 <meta property="og:description" content="导语栈是只允许在一段进行插入和删除操作的线性表，其中允许进行插入删除操作的一端称为栈顶，另一端称为栈底。栈的基本操作包括有：在栈顶进行插入删除操作、栈的初始化、判断栈是否为空、取栈顶元素、遍历栈。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-18T15:18:33.661Z">
+<meta property="og:updated_time" content="2017-10-18T15:38:01.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="栈和队列（一）">
 <meta name="twitter:description" content="导语栈是只允许在一段进行插入和删除操作的线性表，其中允许进行插入删除操作的一端称为栈顶，另一端称为栈底。栈的基本操作包括有：在栈顶进行插入删除操作、栈的初始化、判断栈是否为空、取栈顶元素、遍历栈。">
@@ -379,10 +379,10 @@
 
       
         <h1 id="导语"><a href="#导语" class="headerlink" title="导语"></a>导语</h1><p>栈是只允许在一段进行插入和删除操作的线性表，其中允许进行插入删除操作的一端称为栈顶，另一端称为栈底。<br>栈的基本操作包括有：在栈顶进行插入删除操作、栈的初始化、判断栈是否为空、取栈顶元素、遍历栈。</p>
-<!--more-- >
-
--  栈的结构定义
-
+<a id="more"></a>
+<ul>
+<li>栈的结构定义</li>
+</ul>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&#123;</span></div><div class="line">    sElemType data;<span class="comment">//栈中的数据</span></div><div class="line">    sElemType  *top;<span class="comment">//栈顶指针</span></div><div class="line">    sElemType  *base;<span class="comment">//栈底指针</span></div><div class="line">    <span class="keyword">int</span> stacksize;<span class="comment">//栈底大小</span></div><div class="line">&#125;Stack;</div></pre></td></tr></table></figure>
 <ul>
 <li>栈的初始化</li>
@@ -409,9 +409,9 @@
 </ul>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//遍历栈</span></div><div class="line"><span class="function">Status <span class="title">StackTraverse</span><span class="params">(Stack S )</span> </span>&#123;</div><div class="line">  sElemType *b=S.base;</div><div class="line">  sElemType *t=S.top;</div><div class="line">  <span class="keyword">if</span>(b==t) <span class="keyword">return</span> ERROR;</div><div class="line">  <span class="keyword">while</span>(t&gt;b)&#123;<span class="comment">//栈不为空 </span></div><div class="line">    visit(*b);</div><div class="line">      b++;   </div><div class="line">  &#125;</div><div class="line">  <span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">  <span class="keyword">return</span> OK;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li>总结：在上述代码中发现，凡是涉及到要真实改变栈中的数据的传入的都是地址，不涉及栈的数据改变的传入的都只是当做形参变量在使用。在对栈进行操作时格外要注意栈是否为空。<br>演示代码可以去<a href="https://github.com/isLixing/-data-structure-/blob/master/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.cpp">github查看或下载</a>。</li>
+<li>总结：在上述代码中发现，凡是涉及到要真实改变栈中的数据的传入的都是地址，不涉及栈的数据改变的传入的都只是当做形参变量在使用。在对栈进行操作时格外要注意栈是否为空。<br>演示代码可以去<a href="https://github.com/isLixing/-data-structure-/blob/master/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.cpp" target="_blank" rel="external">github查看或下载</a>。</li>
 </ul>
--->
+
       
     </div>
     
