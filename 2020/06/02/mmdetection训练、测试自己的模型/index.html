@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="数据结构," />
+  <meta name="keywords" content="深度学习," />
 
 
 
@@ -95,16 +95,16 @@
 
 
 
-<meta name="description" content="导语栈是只允许在一段进行插入和删除操作的线性表，其中允许进行插入删除操作的一端称为栈顶，另一端称为栈底。栈的基本操作包括有：在栈顶进行插入删除操作、栈的初始化、判断栈是否为空、取栈顶元素、遍历栈。">
+<meta name="description" content="@TOC 注：本人安装环境为Linux,环境中已安装Anaconda 一、mmdetection安装项目仓库地址：https:&#x2F;&#x2F;github.com&#x2F;open-mmlab&#x2F;mmdetection安装要求：python 3.6+pytorch 1.2（目前mmdetection主分支工作在pytorch1.3~1.5,j旧版本的分支是1.1 ~ 1.4，可以根据需要自己选择安装的版本）CUDA 9">
 <meta property="og:type" content="article">
-<meta property="og:title" content="栈和队列（一）">
-<meta property="og:url" content="http://www.isxing.name/2020/03/23/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:title" content="mmdetection训练、测试自己的模型">
+<meta property="og:url" content="http://www.isxing.name/2020/06/02/mmdetection%E8%AE%AD%E7%BB%83%E3%80%81%E6%B5%8B%E8%AF%95%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="isXing&#39;s Blog">
-<meta property="og:description" content="导语栈是只允许在一段进行插入和删除操作的线性表，其中允许进行插入删除操作的一端称为栈顶，另一端称为栈底。栈的基本操作包括有：在栈顶进行插入删除操作、栈的初始化、判断栈是否为空、取栈顶元素、遍历栈。">
-<meta property="article:published_time" content="2020-03-23T05:31:26.904Z">
-<meta property="article:modified_time" content="2017-10-18T15:38:01.164Z">
+<meta property="og:description" content="@TOC 注：本人安装环境为Linux,环境中已安装Anaconda 一、mmdetection安装项目仓库地址：https:&#x2F;&#x2F;github.com&#x2F;open-mmlab&#x2F;mmdetection安装要求：python 3.6+pytorch 1.2（目前mmdetection主分支工作在pytorch1.3~1.5,j旧版本的分支是1.1 ~ 1.4，可以根据需要自己选择安装的版本）CUDA 9">
+<meta property="article:published_time" content="2020-06-02T15:13:08.136Z">
+<meta property="article:modified_time" content="2020-06-02T15:16:25.703Z">
 <meta property="article:author" content="李 星">
-<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="深度学习">
 <meta name="twitter:card" content="summary">
 
 
@@ -135,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://www.isxing.name/2020/03/23/栈和队列（一）/"/>
+  <link rel="canonical" href="http://www.isxing.name/2020/06/02/mmdetection训练、测试自己的模型/"/>
 
 
 
 
 
-  <title>栈和队列（一） | isXing's Blog</title>
+  <title>mmdetection训练、测试自己的模型 | isXing's Blog</title>
   
 
 
@@ -288,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.isxing.name/2020/03/23/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="http://www.isxing.name/2020/06/02/mmdetection%E8%AE%AD%E7%BB%83%E3%80%81%E6%B5%8B%E8%AF%95%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A8%A1%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李 星">
@@ -305,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">栈和队列（一）</h1>
+          <h1 class="post-title" itemprop="name headline">mmdetection训练、测试自己的模型</h1>
         
 
         <div class="post-meta">
@@ -317,8 +317,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-23T13:31:26+08:00">
-                2020-03-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-02T23:13:08+08:00">
+                2020-06-02
               </time>
             
 
@@ -340,8 +340,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">深度学习</span>
                   </a>
                 </span>
 
@@ -377,50 +377,32 @@
       
 
       
-        <h1 id="导语"><a href="#导语" class="headerlink" title="导语"></a>导语</h1><p>栈是只允许在一段进行插入和删除操作的线性表，其中允许进行插入删除操作的一端称为栈顶，另一端称为栈底。<br>栈的基本操作包括有：在栈顶进行插入删除操作、栈的初始化、判断栈是否为空、取栈顶元素、遍历栈。</p>
-<a id="more"></a>
+        <p>@<a href="这里写目录标题">TOC</a></p>
+<p>注：本人安装环境为Linux,环境中已安装Anaconda</p>
+<h1 id="一、mmdetection安装"><a href="#一、mmdetection安装" class="headerlink" title="一、mmdetection安装"></a>一、mmdetection安装</h1><p>项目仓库地址：<a href="https://github.com/open-mmlab/mmdetection" target="_blank" rel="noopener">https://github.com/open-mmlab/mmdetection</a><br>安装要求：<br>python 3.6+<br>pytorch 1.2（目前mmdetection主分支工作在pytorch1.3~1.5,j旧版本的分支是1.1 ~ 1.4，可以根据需要自己选择安装的版本）<br>CUDA 9.2+ （如果从源码安装，9.0也能兼容）<br>gcc 5+<br>mmcv<br>注：安装前请检查自己的系统环境，避免因为前期准备不足导致后期出现奇奇怪怪的错误，同时避免重复安装，节约时间。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p> 有时候在官网下，载网速过慢会导致下载中断（失败），所以配置一个清华镜像源，下载快速又稳定，贼<strong>香~</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure>
 
-
-<ul>
-<li>栈的结构定义</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&#123;</span></span><br><span class="line">    sElemType data;<span class="comment">//栈中的数据</span></span><br><span class="line">    sElemType  *top;<span class="comment">//栈顶指针</span></span><br><span class="line">    sElemType  *base;<span class="comment">//栈底指针</span></span><br><span class="line">    <span class="keyword">int</span> stacksize;<span class="comment">//栈底大小</span></span><br><span class="line">&#125;Stack;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>栈的初始化</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//初始化一个空栈 </span></span><br><span class="line"><span class="function">Status <span class="title">InitStack</span><span class="params">(Stack &amp;S)</span>  </span>&#123;</span><br><span class="line">    S.base=(sElemType*)<span class="built_in">malloc</span>(maxSize*<span class="keyword">sizeof</span>(sElemType));<span class="comment">//分配存储空间 </span></span><br><span class="line">    <span class="keyword">if</span>(!S.base) <span class="keyword">return</span> ERROR;               <span class="comment">//存储空间分配失败    </span></span><br><span class="line">    S.top=S.base; <span class="comment">//栈空</span></span><br><span class="line">    S.stacksize=maxSize; <span class="comment">//设置最大栈空间</span></span><br><span class="line">    <span class="keyword">return</span> OK; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>判断栈是否为空</li>
-</ul>
-<p>栈判断是否为空就是通过判断栈底和栈底是否相等</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断栈是否为空、</span></span><br><span class="line"><span class="function">Status <span class="title">StackEmpty</span><span class="params">(Stack S)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(S.top==S.base)<span class="comment">//栈空 </span></span><br><span class="line">        <span class="keyword">return</span> FALSE;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        <span class="keyword">return</span> TRUE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>取栈顶元素</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取栈顶元素</span></span><br><span class="line"><span class="function">Status <span class="title">getTop</span><span class="params">(Stack S,sElemType &amp;e)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(S.base==S.top) <span class="keyword">return</span> ERROR;<span class="comment">//栈空</span></span><br><span class="line">    e =*(S.top<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在栈顶插入新元素为栈顶</li>
-</ul>
-<p>这里传入的是栈的地址，目的是在函数中插入新的栈顶后会退出，传入地址可以真实改变栈顶，而不仅仅只是在这个函数中发生改变。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//插入新元素为栈顶</span></span><br><span class="line"><span class="function">Status <span class="title">Push</span><span class="params">(Stack &amp;S,sElemType e)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(S.top-S.base&gt;=S.stacksize)&#123;</span><br><span class="line">        S.base =(sElemType*)<span class="built_in">realloc</span>(S.base,STACKINCREMENT*<span class="keyword">sizeof</span>(sElemType)) ;</span><br><span class="line">        <span class="keyword">if</span>(!S.base) <span class="built_in">exit</span>(OVERFLOW);<span class="comment">//存储分配失败</span></span><br><span class="line">        S.top=S.stacksize+S.base;</span><br><span class="line">        S.stacksize+=STACKINCREMENT; </span><br><span class="line">    &#125; </span><br><span class="line">    *S.top++=e;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>删除栈顶元素</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//删除栈顶元素</span></span><br><span class="line"><span class="function">Status <span class="title">Pop</span><span class="params">(Stack &amp;S,sElemType &amp;e)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(S.top==S.base) <span class="keyword">return</span> ERROR;<span class="comment">//栈空</span></span><br><span class="line"><span class="comment">//  e=*(S.top-1);</span></span><br><span class="line"><span class="comment">//  S.top--;</span></span><br><span class="line">    e=*--S.top;<span class="comment">//与上边注释的两行代码等价</span></span><br><span class="line">    <span class="keyword">return</span> OK; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>遍历栈</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//遍历栈</span></span><br><span class="line"><span class="function">Status <span class="title">StackTraverse</span><span class="params">(Stack S )</span> </span>&#123;</span><br><span class="line">  sElemType *b=S.base;</span><br><span class="line">  sElemType *t=S.top;</span><br><span class="line">  <span class="keyword">if</span>(b==t) <span class="keyword">return</span> ERROR;</span><br><span class="line">  <span class="keyword">while</span>(t&gt;b)&#123;<span class="comment">//栈不为空 </span></span><br><span class="line">    visit(*b);</span><br><span class="line">      b++;   </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">  <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>总结：在上述代码中发现，凡是涉及到要真实改变栈中的数据的传入的都是地址，不涉及栈的数据改变的传入的都只是当做形参变量在使用。在对栈进行操作时格外要注意栈是否为空。<br>演示代码可以去<a href="https://github.com/isLixing/-data-structure-/blob/master/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.cpp" target="_blank" rel="noopener">github查看或下载</a>。</li>
-</ul>
+<p>安装pytorch1.2+torchvision 0.4.0 cuda9.2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pytorch&#x3D;&#x3D;1.2.0 torchvision&#x3D;&#x3D;0.4.0 cudatoolkit&#x3D;9.2</span><br></pre></td></tr></table></figure>
+<p>安装mmcv</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">下面两种方法选一种就好啦 </span><br><span class="line">1.从源码安装</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;open-mmlab&#x2F;mmcv.git</span><br><span class="line">cd mmcv</span><br><span class="line">pip install -e .#注意有个点！！！！</span><br><span class="line">2.直接安装</span><br><span class="line">pip install mmcv</span><br></pre></td></tr></table></figure>
+<p>安装Cython</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install Cython</span><br></pre></td></tr></table></figure>
+<p>安装mmdection</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;open-mmlab&#x2F;mmdetection.git</span><br><span class="line">cd mmdetection</span><br><span class="line">python setup.py develop#或者   pip install -v -e .**(有个点！！！！**)</span><br></pre></td></tr></table></figure>
+<h1 id="测试安装是否成功"><a href="#测试安装是否成功" class="headerlink" title="测试安装是否成功"></a>测试安装是否成功</h1><p>测试文件：test.py 关于checkpoint文件官方给出的是一个链接，下载速度极慢，所以提前下载好了再测试，下载链接：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> mmdet.apis <span class="keyword">import</span> init_detector, inference_detector, show_result</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 首先下载模型文件https://s3.ap-northeast-2.amazonaws.com/open-mmlab/mmdetection/models/faster_rcnn_r50_fpn_1x_20181010-3d1b3351.pth</span></span><br><span class="line"></span><br><span class="line">config_file = <span class="string">'./configs/faster_rcnn_r50_fpn_1x.py'</span></span><br><span class="line">checkpoint_file = <span class="string">'./checkpoints/faster_rcnn_r50_fpn_1x_20181010-3d1b3351.pth'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化模型</span></span><br><span class="line">model = init_detector(config_file, checkpoint_file)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 测试一张图片</span></span><br><span class="line">img = <span class="string">'test.jpg'</span></span><br><span class="line">result = inference_detector(model, img)</span><br><span class="line">show_result(img, result, model.CLASSES,show=<span class="literal">False</span>,out_file=<span class="string">'result_&#123;&#125;..jpg'</span>)<span class="comment">#默认show=True,Linux下会报cannot connect to X server的错误，所以干脆输出图片了</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 测试一系列图片</span></span><br><span class="line"><span class="comment"># imgs = ['test1.jpg', 'test2.jpg']</span></span><br><span class="line"><span class="comment"># for i, result in enumerate(inference_detector(model, imgs, device='cuda:0')):</span></span><br><span class="line"><span class="comment">#     show_result(imgs[i], result, model.CLASSES, out_file='result_&#123;&#125;.jpg'.format(i))</span></span><br></pre></td></tr></table></figure>
+<p>pth文件的下载链接: <a href="%E9%93%BE%E6%8E%A5:%20https://pan.baidu.com/s/1IA9fGHQYSdjje3N1POGFKQ">https://pan.baidu.com/s/1IA9fGHQYSdjje3N1POGFKQ</a> 提取码: nbq6</p>
+<h2 id="我遇到的错误"><a href="#我遇到的错误" class="headerlink" title="我遇到的错误"></a>我遇到的错误</h2><p>错误1： undefined symbol: _ZN3c105ErrorC1ENS_14SourceLocationERKSs<br>原因：torchvision安装出错或指责cuda版本不适配，尝试重新安装，也可能是粗大版本不适配，总之多尝试几种方法就可以了，如果还是不行的话，把mmdetection卸载重装<br>总之是文件遭到损坏/版本不匹配，导致部分信息丢失，目前最快速解决方法是卸载重装。</p>
+<p>错误2：cannot import name ‘get_dist_info’ from ‘mmcv.runner.utils’ (/opt/conda/envs/env_name/lib/python3.7/site-packages/mmcv/runner/utils.py)<br>解决方法：注释sampler.py中的导入get_dist_info语句，这个包在文件中并没有被使用到，但是检测到这一步会报错，可能是版本更新导致的问题。</p>
+<h1 id="二、训练自己的数据（coco数据集）"><a href="#二、训练自己的数据（coco数据集）" class="headerlink" title="二、训练自己的数据（coco数据集）"></a>二、训练自己的数据（coco数据集）</h1><p>coco数据集的结构建议按照官方给的格式布局.<br>链接数据集地址：例如： ln -s $COCO_ROOT data/coco（data/coco是 我的数据集所在的根目录）<br>在mmdetection/mmdet/datasets 目录下设置相关数据集，例如设置coco数据集在coco.py中，修改所需要的CLASSES</p>
+<p>修改configs下你所使用的配置文件：<br>主要修改dataset_type、训练集、验证集、测试集的地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># dataset settings</span><br><span class="line">dataset_type &#x3D; &#39;CocoDataset&#39;</span><br><span class="line">data_root &#x3D; &#39;.&#x2F;data&#x2F;coco&#x2F;&#39;</span><br></pre></td></tr></table></figure>
+<p>此外在optimizer中修改优化方法、学习率。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#optimizer</span><br><span class="line">optimizer &#x3D; dict(type&#x3D;&#39;SGD&#39;, lr&#x3D;0.02, momentum&#x3D;0.9, weight_decay&#x3D;0.0001)</span><br><span class="line">optimizer_config &#x3D; dict(grad_clip&#x3D;dict(max_norm&#x3D;35, norm_type&#x3D;2))</span><br></pre></td></tr></table></figure>
+<p>调整num_classes为自己数据集类别数目+1，该数据不调整的话，训练时会提示错误<br>调整imgs_per_gpu可以修改batch大小，batch过大时可能出现shm不足，如果改为1之后依然出现内存不足，那么需要修改 num_workers=0 。(mmdet/datasets/loader/builder_loader.py)</p>
+<p>runtime settings中可以设置在运行过程中的各项默认参数<br>开始训练<br>python tools/train.py configs/xxxxx.py(你选择的 配置文件) –gups 1<br>–gpus 可以设置训练的GPU数</p>
 
       
     </div>
@@ -438,7 +420,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
+            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag"># 深度学习</a>
           
         </div>
       
@@ -451,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/23/%E6%8E%92%E5%BA%8F%E2%80%94%E2%80%94%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" rel="next" title="排序——快速排序">
-                <i class="fa fa-chevron-left"></i> 排序——快速排序
+              <a href="/2020/03/23/%E9%98%9F%E5%88%97/" rel="next" title="队列">
+                <i class="fa fa-chevron-left"></i> 队列
               </a>
             
           </div>
@@ -460,10 +442,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/03/23/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89/" rel="prev" title="栈和队列（二）">
-                栈和队列（二） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -637,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#导语"><span class="nav-number">1.</span> <span class="nav-text">导语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、mmdetection安装"><span class="nav-number">1.</span> <span class="nav-text">一、mmdetection安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.1.</span> <span class="nav-text">准备</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试安装是否成功"><span class="nav-number">2.</span> <span class="nav-text">测试安装是否成功</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#我遇到的错误"><span class="nav-number">2.1.</span> <span class="nav-text">我遇到的错误</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、训练自己的数据（coco数据集）"><span class="nav-number">3.</span> <span class="nav-text">二、训练自己的数据（coco数据集）</span></a></li></ol></div>
             
 
           </div>
